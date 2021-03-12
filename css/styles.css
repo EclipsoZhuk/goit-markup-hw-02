@@ -35,6 +35,18 @@ li {
   list-style: none;
 }
 
+/* Убирает заголовки */
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
 /* Logo */
 .logo {
   color: #000000;
@@ -53,7 +65,7 @@ li {
 }
 
 /* Site nav */
-.site-nav .link {
+.link {
   color: var(--primary-text-color);
 
   font-weight: 500;
@@ -65,6 +77,9 @@ li {
 .site-nav .link:focus {
   color: var(--accent-color);
 }
+.link.current {
+  color: var(--accent-color);
+}
 
 /* Верхнии контакты */
 .top-connection .contacts,
@@ -73,7 +88,7 @@ li {
 
   font-weight: 500;
   font-size: 14px;
-  line-height: 16px;
+  line-height: 1.14;
   letter-spacing: 0.02em;
 }
 .top-connection .contacts:hover,
@@ -108,7 +123,10 @@ li {
   letter-spacing: 0.06em;
   cursor: var(--cursor-button);
 }
-
+.hero-button:hover,
+.hero-button:focus {
+  background-color: #188ce8;
+}
 /* О нас */
 .about-us-section .about-us-title {
   font-weight: 700;
@@ -133,8 +151,6 @@ li {
   text-align: center;
   letter-spacing: 0.03em;
 }
-
-/* Наши работы */
 
 /* Наша команда */
 .our-team {
@@ -219,14 +235,11 @@ li {
   letter-spacing: 0.03em;
 }
 
-/* Убирает заголовки */
-.visually-hidden {
-  position: absolute !important;
-  clip: rect(1px 1px 1px 1px);
-  clip: rect(1px, 1px, 1px, 1px);
-  padding: 0 !important;
-  border: 0 !important;
-  height: 1px !important;
-  width: 1px !important;
-  overflow: hidden;
+/* Footer */
+.studio-white {
+  color: #ffffff;
+}
+.studio-white:hover,
+.studio-white:focus {
+  color: var(--accent-color);
 }
